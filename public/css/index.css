@@ -9,14 +9,32 @@ body {
 h1 {
   color: white;
   font-size: 55px;
-   -webkit-text-stroke: 0.5px black;
+   -webkit-text-stroke: 0.8px black;
 }
 
 p {
-  color: #a5ffff;
+  color: rgb(0, 212, 176);
+  -webkit-text-stroke: 0.4px white;
   font-size: 25px;
 }
 
+
 #logoutLink {
   display: none;
+}
+
+#homepageCenter {
+ margin-left: 25%;
+ margin-right: 25%;
+ padding: 5px;
+ background-color: #ffffff;
+ opacity: 0.6;
+ filter: alpha(opacity=60);
+}
+
+
+#homepageCenter h2 a {
+  margin: 15%;
+  font-weight: bold;
+  color: #000000;
 }
