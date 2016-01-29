@@ -5,7 +5,6 @@ var express = require('express');
 var router = express.Router();
 
 var authMiddleware = require('../config/auth');
-
 var User = require('../models/user');
 
 var ref = new Firebase('https://userscrud.firebaseio.com/');
@@ -32,7 +31,7 @@ router.post('/login', function(req, res, next) {
 router.get('/profile', authMiddleware, function(req, res) {
   //// logged in,   req.user
   User.findById(req.user._id, function(err, user) {
-    res.send(user);
+    res.send(user.cities);
   });
 });
 

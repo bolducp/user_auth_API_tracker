@@ -1,7 +1,7 @@
 
 
 body {
-  background: url('http://www.splitshire.com/wp-content/uploads/2014/05/SplitShire_IMG_2504.jpg') no-repeat center center fixed;
+  background: url('/img/storm.jpg') no-repeat center center fixed;
   background-size: cover;
   text-align: center;
 }

@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title API Tracker
+    link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Inconsolata')
+    link(rel='stylesheet', href='/css/style.css')
+    block links
+  body
+    nav.navbar.navbar-default.navbar-static-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+          a.navbar-brand(href='/') Paige's Weather API Tracker
+    
+    .container
+      h1 Authentication Failed. 
+      h3 Please log in to view weather at your tracked locations.
+      br
+      div
+        h2 
+          a(href="/login") Log in 
+        h2 
+          a(href="/register") Create Account
+      block content
+
+    script(src='/lib/jquery/dist/jquery.min.js')
+    script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
+    block scripts

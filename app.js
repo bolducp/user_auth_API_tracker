@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/herokutest'
+var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/herokutest';
 var mongoose = require('mongoose');
 mongoose.connect(mongoUrl, function(err) {
   console.log(err || `Connected to MongoDB: ${mongoUrl}`);
@@ -59,6 +59,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;
