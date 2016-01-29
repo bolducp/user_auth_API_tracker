@@ -1,8 +1,14 @@
 extends layout
 
+block scripts
+  link(rel='stylesheet', href='/css/index.css')
+
 block content
-  h1= title
-  p Welcome to #{title}
+  br
+  br
+  br
+  h1 Multi-city Weather Tracker
+  p Keep track of the weather in all of your favorite places
 
 block scripts
   script(src='/lib/firebase/firebase.js')
