@@ -5,6 +5,7 @@ var jwt = require('jwt-simple');
 var JWT_SECRET = process.env.JWT_SECRET;
 
 var userSchema = new mongoose.Schema({
+  username: String,
   uid: String,
   cities: [{
     zipcode: String

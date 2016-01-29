@@ -10,7 +10,6 @@ var authMiddleware = function(req, res, next) {
   } catch(err) {
     return res.status(401).render('authenticationFail');
   }
-
   req.user = payload;
   next();
 };

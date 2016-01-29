@@ -10,13 +10,24 @@ var User = require('../models/user');
 var ref = new Firebase('https://userscrud.firebaseio.com/');
 
 router.post('/register', function(req, res, next) {
+  console.log(req.body);
   ref.createUser(req.body, function(err, userData) {
     if(err) return res.status(400).send(err);
-    User.create(userData, function(err) {
-      res.send();
+    console.log("userData ", userData);
+    var user = new User({
+      uid: userData.uid,
+      username: req.body.email,
+      cities: []
+    });
+     user.save(function(err, savedUser) {
+      console.log(savedUser);
+      res.send(savedUser);
     });
   });
 });
+
+
+
 
 router.post('/login', function(req, res, next) {
   ref.authWithPassword(req.body, function(err, authData) {
