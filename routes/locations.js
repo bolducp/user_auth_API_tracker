@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var authMiddleware = require('../config/auth');
+var request = require('request');
 
 router.use(authMiddleware);
 

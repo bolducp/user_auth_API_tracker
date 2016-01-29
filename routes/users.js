@@ -8,7 +8,7 @@ var authMiddleware = require('../config/auth');
 
 var User = require('../models/user');
 
-var ref = new Firebase('https://<NOT-CADES-FIREBASE>.firebaseio.com/');
+var ref = new Firebase('https://userscrud.firebaseio.com/');
 
 router.post('/register', function(req, res, next) {
   ref.createUser(req.body, function(err, userData) {
