@@ -10,4 +10,5 @@ current functionality supports: viewing, adding, and deleting weather locations 
 
 ### usage
 currently hosted on heroku here: https://fathomless-wildwood-70138.herokuapp.com/
+
 follow the prompts and create an account to begin
