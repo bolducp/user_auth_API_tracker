@@ -1,0 +1,28 @@
+body {
+  background: url('/img/profile.jpg') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  color: rgb(255, 193, 7);
+  font-size: 22px;
+}
+
+th {
+    -webkit-text-stroke: 0.1px black;
+    font-size: 26px;
+}
+
+h1 {
+  color: white;
+  font-size: 55px;
+  -webkit-text-stroke: 0.8px black;
+}
+
+h3 {
+  -webkit-text-stroke: 0.4px black;
+}
+
+p {
+  color: rgb(0, 212, 176);
+  -webkit-text-stroke: 0.4px white;
+  font-size: 25px;
+}

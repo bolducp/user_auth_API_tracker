@@ -37,6 +37,7 @@ router.post('/login', function(req, res, next) {
   });
 });
 
+/* POST request to reset password */
 router.post('/resetPassword', function(req, res, next){
   ref.resetPassword({
     email: req.body.email
@@ -50,6 +51,23 @@ router.post('/resetPassword', function(req, res, next){
 });
 
 
+/* POST request to change user password */
+router.post('/changePassword', function(req, res, next){
+  ref.changePassword({
+    email: req.body.email,
+    oldPassword: req.body.oldPassword,
+    newPassword: req.body.newPassword,
+  }, function(error) {
+    if (error) {
+      res.status(400).send(error);
+    } else {
+      res.send();
+    }
+  });
+});
+
+
+/* GET request to display user profile */
 router.get('/profile', authMiddleware, function(req, res) {
   User.findById(req.user._id, function(err, user) {
     var cities = [];

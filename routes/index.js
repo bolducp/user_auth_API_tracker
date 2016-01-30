@@ -20,6 +20,10 @@ router.get('/resetPassword', function(req, res, next) {
   res.render('resetPassword');
 });
 
+router.get('/changePassword', function(req, res, next) {
+  res.render('changePassword');
+});
+
 router.get('/secret', authMiddleware, function(req, res, next) {
   res.send('Wooo!  Secret stuff!!!');
 });
