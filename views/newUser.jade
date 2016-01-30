@@ -1,0 +1,18 @@
+extends loggedInLayout
+
+block content
+  h1 Welcome to Paige's Weather API, #{username}!
+  h5 Thanks for registering!
+  br
+  br
+  h2 To get started, add a zipcode to your personal tracked locations.
+  h4 *You can delete locations in your profile page.
+  br
+  br
+  h3 Add a zipcode to your tracked locations:
+  input#newZip(type="text", required) 
+  input#submitNew.btn.btn-info(type="submit")
+            
+block scripts
+  script(src="/js/profile.js")
+    

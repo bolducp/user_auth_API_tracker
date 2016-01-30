@@ -1,0 +1,31 @@
+extends loggedInLayout
+
+block content
+  h1 User profile for #{username}
+  br
+  
+  h1 You have the following locations saved:
+  br
+  div
+    table.table.table-hover
+        thead
+          tr: th Location
+              th Zipcode
+        tbody
+          each city in cities
+            tr.rows
+              td.searchable #{city.name}
+              td #{city.zipcode}
+  br            
+  h3 Add a zipcode to your tracked locations:
+  input#newZip(type="text", required) 
+  button#submitNew.btn.btn-info Add 
+  br
+  br
+  h3 Delete a zipcode from your tracked locations:
+  input#deleteZip(type="text", required) 
+  button#delete.btn.btn-danger Delete
+            
+block scripts
+  script(src="/js/profile.js")
+    
