@@ -19,12 +19,12 @@ html
             li
               a(href='/locations/')
                 span.glyphicon.glyphicon-home
-            li
+            li#view
               a(href='/users/profile/') View profile
           ul.nav.navbar-nav.navbar-right
             li 
               a Logged in as: #{username}
-            li
+            li#change
               a(href='/changePassword') Change password
             li#logoutLink
               a(href='/users/logout') Logout

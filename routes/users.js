@@ -50,7 +50,6 @@ router.post('/resetPassword', function(req, res, next){
   });
 });
 
-
 /* POST request to change user password */
 router.post('/changePassword', function(req, res, next){
   ref.changePassword({
@@ -65,7 +64,6 @@ router.post('/changePassword', function(req, res, next){
     }
   });
 });
-
 
 /* GET request to display user profile */
 router.get('/profile', authMiddleware, function(req, res) {

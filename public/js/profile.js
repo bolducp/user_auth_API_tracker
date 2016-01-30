@@ -22,7 +22,6 @@ function addZipcode(e){
   });
 }
 
-
 function deleteZipcode(e){
   e.preventDefault();
   var deleteZip = $('#deleteZip').val();
