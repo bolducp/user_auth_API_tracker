@@ -1,10 +1,13 @@
-# Auth Starter Pack
+# API Multi-City Weather Tracker with User Authentication 
 
-To begin enter `npm run setup`.  This will install all dependencies.
+## Note:
+Currently, the app will only accept 5-digit zipcodes. If a user enters an invalid zipcode, everything breaks due to the way I'm accessing the API via the node request module. My next step will be fixing this bug.
 
-Then, set your environment variable, by entering `export JWT_SECRET='anything you want'`
-Be sure to enter your Firebase address in routes/users.js
+## functionality
+##### an app in which users can create and log into accounts and save many locations for tracking the weather
+current functionality supports: viewing, adding, and deleting weather locations from one's profile, login and logout, account creation
 
-NOTE:  Be sure to enter this in the same terminal window that you are running your server.
 
-After all that, you can start your server with `npm start` or `nodemon`.
+### usage
+currently hosted on heroku here: https://fathomless-wildwood-70138.herokuapp.com/
+follow the prompts and create an account to begin
