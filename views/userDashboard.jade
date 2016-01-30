@@ -10,10 +10,20 @@ block content
   h1 Weather for your tracked locations:
   br
   div
-    each city in cities
-      h2 #{city}
-      
-      
+    table.table.table-hover
+        thead
+          tr: th Location
+              th Observation Time
+              th Current Temperature
+              th Description
+        tbody
+          each city in cities
+            tr.rows
+              td.searchable #{city.name}
+              td  #{city.time}
+              td #{city.temperature}
+              td #{city.weather}
+              
 block scripts
   script(src="/js/dashboard.js")
     

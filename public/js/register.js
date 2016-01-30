@@ -6,7 +6,6 @@ $(function() {
   $email = $('#email');
   $password = $('#password');
   $password2 = $('#password2');
-
   $('form').on('submit', registerUser);
 });
 
