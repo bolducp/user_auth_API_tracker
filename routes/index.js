@@ -17,7 +17,6 @@ router.get('/register', function(req, res, next) {
 });
 
 router.get('/secret', authMiddleware, function(req, res, next) {
-  console.log('req.user:', req.user);
   res.send('Wooo!  Secret stuff!!!');
 });
 
