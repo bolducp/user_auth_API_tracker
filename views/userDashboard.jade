@@ -1,4 +1,19 @@
 extends loggedInLayout
 
 block content
-  h1=cities
+  h1 Welcome, #{username}!
+  br
+  h3 Add a zipcode to your tracked locations:
+  input#newZip(type="text", required) 
+  input#submitNew.btn.btn-info(type="submit")
+  
+  h1 Weather for your tracked locations:
+  br
+  div
+    each city in cities
+      h2 #{city}
+      
+      
+block scripts
+  script(src="/js/dashboard.js")
+    
