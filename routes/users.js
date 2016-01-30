@@ -37,6 +37,18 @@ router.post('/login', function(req, res, next) {
   });
 });
 
+router.post('/resetPassword', function(req, res, next){
+  ref.resetPassword({
+    email: req.body.email
+  }, function(error) {
+    if (error) {
+      res.status(400).send(error);
+    } else {
+      res.send();
+    }
+  });
+});
+
 
 router.get('/profile', authMiddleware, function(req, res) {
   User.findById(req.user._id, function(err, user) {

@@ -16,6 +16,10 @@ router.get('/register', function(req, res, next) {
   res.render('register');
 });
 
+router.get('/resetPassword', function(req, res, next) {
+  res.render('resetPassword');
+});
+
 router.get('/secret', authMiddleware, function(req, res, next) {
   res.send('Wooo!  Secret stuff!!!');
 });
