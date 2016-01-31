@@ -25,19 +25,22 @@ router.get('/', function(req, res, next) {
         request('http://api.wunderground.com/api/fcb373f2e2380e25/conditions/q/' + zip + '.json',
           function(error, response, body){
             var city = {};
-
-            if (!error && response.statusCode == 200){
-              var body = JSON.parse(body);
-              city.name = body.current_observation.display_location.full;
-              city.temperature = body.current_observation.temperature_string;
-              city.time = body.current_observation.observation_time;
-              city.weather = body.current_observation.weather;
-              cities.push(city);
-              iterator += 1;
-
-              if (iterator == user.cities.length){
-                res.render('userDashboard', {cities: cities, username: user.username});
+            try{
+              if (!error && response.statusCode == 200){
+                var body = JSON.parse(body);
+                city.name = body.current_observation.display_location.full;
+                city.temperature = body.current_observation.temperature_string;
+                city.time = body.current_observation.observation_time;
+                city.weather = body.current_observation.weather;
+                cities.push(city);
               }
+            } catch(err){
+              console.log(err);
+            }
+            iterator += 1;
+
+            if (iterator == user.cities.length){
+              res.render('userDashboard', {cities: cities, username: user.username});
             }
           });
         }
