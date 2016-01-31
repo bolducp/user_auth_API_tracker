@@ -60,7 +60,6 @@ router.post('/', function(req, res, next) {
 
 router.delete('/', function(req, res, next) {
   User.findOne({ _id: req.user._id}, function(err, user) {
-    console.log("req.body.deleteZip ",req.body.deleteZip);
     var index = user.cities.indexOf(req.body.deleteZip);
     if (index > -1){
       user.cities.splice(index, 1);
